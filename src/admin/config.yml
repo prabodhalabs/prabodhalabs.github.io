@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: prabodhalabs/prabodhalabs.github.io
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth/done
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", hint: "Short description for SEO (150-160 chars)" }
+      - { label: "Tags", name: "tags", widget: "list", hint: "e.g. puzzle-games, brain-training" }
+      - { label: "Body", name: "body", widget: "markdown" }
