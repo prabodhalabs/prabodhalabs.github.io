@@ -1,4 +1,13 @@
 /* Blog specific styles extending main style.css */
+:root {
+    --bg-card: var(--card-bg);
+    --text-primary: var(--text-main);
+    --text-secondary: var(--text-muted);
+    --border-color: var(--card-border);
+    --neon-purple: #9333ea;
+    --neon-cyan: var(--neon-blue);
+}
+
 .blog-header {
     text-align: center;
     padding: 60px 0 40px;
